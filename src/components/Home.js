@@ -1,8 +1,8 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'
 import { Link } from 'react-router-dom'
-//import login from './login';
-import login from './Form/login';
+//import register from './login';
+//import login from './Form/login';
 const Home = () => (
     <React.Fragment>
         <Helmet>
@@ -22,8 +22,8 @@ const Home = () => (
                     </ul>
                 </div>
                  <div className="auth-container">
-                    <Link className="auth-buttons" id="login-button" to="/login">Add Question</Link>
-                    {/* <Link className="auth-buttons" id="register-button" to="/register">Register</Link> */}
+                    <Link className="auth-buttons" id="login-button" to="/login">Add MCQ</Link>
+                     <Link className="auth-buttons" id="register-button" to="/register">Add Simple Question</Link> 
                 </div> 
             </section>
         </div>

@@ -83,12 +83,6 @@ class DynamicForm extends Component {
       if(input.type === 'select') {
         return this.renderSelect(input);
       }
-      if(input.type === 'checkbox') {
-        return this.renderCheckBox(input);
-      }
-      if(input.type === 'textarea') {
-        return this.renderTextArea(input);
-      }
       return (
         <div key={input.name}>
           <label>{input.label}</label>
@@ -130,7 +124,7 @@ class DynamicForm extends Component {
   render() {
     const initialValues = this.getInitialValues(this.props.fields);
     return (
-      <div className="app1">
+      <div className="app">
         <h1>Dynamic Form</h1>
         <Formik
           onSubmit={(values) => {console.log(values)}}
@@ -140,9 +134,6 @@ class DynamicForm extends Component {
             const errorMessageShow = Object.keys(form.errors).length > 0 ? 'error' : 'hidden';
             return <div>
               <form onSubmit={form.handleSubmit}>
-                <div className={errorMessageShow}>
-                  Please correct the errors below
-                </div>
                 {this.renderFields(this.props.fields)}
                 <button type='submit' className='btn'>Submit</button>
               </form>
