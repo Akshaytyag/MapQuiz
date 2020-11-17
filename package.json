@@ -2,6 +2,7 @@
   "name": "quizapp",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://akshaytyag.github.io/MapQuiz/",
   "dependencies": {
     "@mdi/font": "^4.7.95",
     "@testing-library/jest-dom": "^4.2.4",
